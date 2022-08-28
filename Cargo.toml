@@ -1,0 +1,17 @@
+[package]
+name = "colorid"
+version = "0.0.1-dev.0"
+license = "MIT"
+description = "WIP ColorID Generator for Rust"
+edition = "2021"
+authors = ["RustQ"]
+include = ["src/**/*", "Cargo.toml", "LICENSE", "README.md"]
+homepage = "https://github.com/rustq/colorid"
+documentation = "https://docs.rs/colorid"
+readme = "README.md"
+keywords = ["colorid", "color", "id", "random"]
+repository = "https://github.com/rustq/colorid.git"
+
+[dependencies]
+hex = "0.4.3"
+rand = "0.8.5"
