@@ -1,50 +1,45 @@
-use rand::{
-    rngs::{StdRng},
-    Rng, SeedableRng,
-};
+pub mod rng;
 
-pub const HEX_CHARS: [char; 16] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+mod hex;
 
-pub fn hex(number: u8) -> [char;2] {
-    let low = number % 16;
-    let high = (number - low) / 16;
-    [HEX_CHARS[high as usize], HEX_CHARS[low as usize]]
-}
-
-pub fn format(count: usize, random: fn(usize) -> Vec<u8>) -> String {
-    assert!(count > 0, "The count should at least greater than 0");
-
-    let buffer: Vec<u8> = random(count * 3);
-    let mut id: String = String::with_capacity(count * 7 - 1);
-
-    for i in 0..count {
-        let r = hex(buffer[i * 3]);
-        let g = hex(buffer[i * 3 + 1]);
-        let b = hex(buffer[i * 3 + 2]);
-        id.push(r[0]);
-        id.push(r[1]);
-        id.push(g[0]);
-        id.push(g[1]);
-        id.push(b[0]);
-        id.push(b[1]);;
-        if i + 1 < count {
-            id.push('-');
-        }
+pub fn default() -> String {
+    let buffer: [u8; 12] = rng::default();
+    let mut id: [u8; 27] = [hex::DASH; 27];
+    for i in 0..4 {
+        let r = hex::hex(buffer[i * 3]);
+        let g = hex::hex(buffer[i * 3 + 1]);
+        let b = hex::hex(buffer[i * 3 + 2]);
+        id[i * 7 + 0] = r[0];
+        id[i * 7 + 1] = r[1];
+        id[i * 7 + 2] = g[0];
+        id[i * 7 + 3] = g[1];
+        id[i * 7 + 4] = b[0];
+        id[i * 7 + 5] = b[1];
     }
-    id
+    unsafe {
+        std::str::from_utf8_unchecked_mut(&mut id).to_owned()
+    }
 }
-
-pub fn default_random(size: usize) -> Vec<u8> {
-    let mut rng = StdRng::from_entropy();
-    let mut buffer: Vec<u8> = vec![0; size];
-
-    rng.fill(&mut buffer[..]);
-    buffer
-}
-
 
 pub fn colorid(count: usize) -> String {
-    format(count, default_random)
+    assert!(count > 0, "The count should at least greater than 0");
+
+    let buffer: Vec<u8> = rng::generate(count * 3);
+    let mut id: Vec<u8> = vec![hex::DASH; count * 7 - 1];
+    for i in 0..count {
+        let r = hex::hex(buffer[i * 3]);
+        let g = hex::hex(buffer[i * 3 + 1]);
+        let b = hex::hex(buffer[i * 3 + 2]);
+        id[i * 7 + 0] = r[0];
+        id[i * 7 + 1] = r[1];
+        id[i * 7 + 2] = g[0];
+        id[i * 7 + 3] = g[1];
+        id[i * 7 + 4] = b[0];
+        id[i * 7 + 5] = b[1];
+    }
+    unsafe {
+        std::str::from_utf8_unchecked_mut(&mut id).to_owned()
+    }
 }
 
 #[cfg(test)]
@@ -68,7 +63,7 @@ mod test_color {
 macro_rules! colorid {
     // simple
     () => {
-        $crate::colorid(4)
+        $crate::default()
     };
 
     // size

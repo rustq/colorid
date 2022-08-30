@@ -1,6 +1,6 @@
 [package]
 name = "colorid"
-version = "0.0.1-dev.1"
+version = "0.0.1-dev.2"
 license = "MIT"
 description = "WIP ColorID Generator for Rust"
 edition = "2021"
@@ -13,7 +13,7 @@ keywords = ["colorid", "color", "id", "random"]
 repository = "https://github.com/rustq/colorid.git"
 
 [dependencies]
-rand = "0.8.5"
+getrandom = { version = "0.2" }
 
 [dev-dependencies]
 criterion = "0.3"
@@ -22,9 +22,8 @@ nanoid = "0.4.0"
 [dev-dependencies.uuid]
 version = "1.1.2"
 features = [
-    "v4",                # Lets you generate random UUIDs
-    "fast-rng",          # Use a faster (but still sufficiently random) RNG
-    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+    "v4",
+    "rng"
 ]
 
 [[bench]]
