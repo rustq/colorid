@@ -1,6 +1,6 @@
-<img src="https://user-images.githubusercontent.com/11075892/189524235-e20dfc88-6986-468c-8920-349887e516ce.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189524254-ff66b01a-ea54-4025-8c99-fbc413814c8a.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189524263-537b3569-6c45-4ee7-8139-e0fddf9b2226.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189524266-aa3bb68c-0cbb-4120-916d-257ecc0db246.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189524271-e3c92f62-4ef1-4703-8438-640ae436c8fc.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189524273-4c569f99-3ba4-4c70-a22e-ed67b1be34f3.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189524274-d3b4faea-b1a1-42fd-a32b-a16ded1a007e.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189524281-e6cf4b57-a932-4795-9dc7-22675d209af0.svg" width="100px" />
+<img src="https://user-images.githubusercontent.com/11075892/189526526-4a0a0049-1714-4ba4-a967-3a7f62d5e5e0.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189526521-ac0f8644-4915-4feb-b371-d9b3add3cb44.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189526523-4ae3ff55-6758-4bf9-93b2-fbde7a4267f2.svg" width="100px" /><img src="https://user-images.githubusercontent.com/11075892/189526525-7e69a486-a416-4fa9-a980-4e8fe9186bbc.svg" width="100px" />
 
-# Color ID
+# ColorID
 
 [![Package version](https://img.shields.io/crates/v/colorid.svg)](https://crates.io/crates/colorid)
 [![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](https://github.com/rustq/colorid/blob/master/LICENSE)
@@ -26,6 +26,12 @@ fn main() {
 }
 ```
 
-## Color ID in Other Languages
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+
+## ColorID in Other Languages
 
 - [JavaScript](https://github.com/rustq/colorid.js)
