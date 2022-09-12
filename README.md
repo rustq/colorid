@@ -26,6 +26,15 @@ fn main() {
 }
 ```
 
+## Benchmark
+
+```rust
+colorid                 time:   [843.68 ns 850.76 ns 858.04 ns]
+uuid                    time:   [904.09 ns 922.00 ns 941.15 ns]
+nanoid                  time:   [1.1065 µs 1.1211 µs 1.1371 µs]
+```
+
+[runs/8309729209](https://github.com/rustq/colorid/runs/8309729209)
 
 ## License
 
