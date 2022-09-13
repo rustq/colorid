@@ -1,6 +1,6 @@
 [package]
 name = "colorid"
-version = "0.0.1"
+version = "0.0.2"
 license = "MIT"
 description = "WIP ColorID Generator for Rust"
 edition = "2021"

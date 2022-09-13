@@ -1,3 +1,4 @@
+pub const NUMBER_SIGN: u8 = b'#';
 pub const DASH: u8 = b'-';
 
 pub const UPPER_U8: [u8; 16] = [

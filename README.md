@@ -5,7 +5,7 @@
 [![Package version](https://img.shields.io/crates/v/colorid.svg)](https://crates.io/crates/colorid)
 [![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](https://github.com/rustq/colorid/blob/master/LICENSE)
 
-`The ColorID in Rust`
+`Color as Identify - The ColorID in Rust`
 
 `一款基于颜色表示身份的 Rust 随机 ID 生成器`
 
@@ -22,19 +22,19 @@ nanoid = "0.0.1"
 use colorid::colorid;
 
 fn main() {
-   let id = colorid!(); //=> D020B5-2BC144-5F308F-D2599A
+   let id = colorid!(); // #A3F68E-#33EFAF-#8CB823-#D82C91
 }
 ```
 
 ## Benchmark
 
 ```rust
-colorid                 time:   [843.68 ns 850.76 ns 858.04 ns]
-uuid                    time:   [904.09 ns 922.00 ns 941.15 ns]
-nanoid                  time:   [1.1065 µs 1.1211 µs 1.1371 µs]
+colorid                 time:   [735.43 ns 735.51 ns 735.61 ns]
+uuid                    time:   [750.16 ns 750.33 ns 750.62 ns]
+nanoid                  time:   [926.34 ns 926.45 ns 926.57 ns]
 ```
 
-[runs/8309729209](https://github.com/rustq/colorid/runs/8309729209)
+[run: 3045840932](https://github.com/rustq/colorid/actions/runs/3045840932/jobs/4907902169)
 
 ## License
 
