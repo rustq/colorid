@@ -4,17 +4,18 @@ mod hex;
 
 pub fn default() -> String {
     let buffer: [u8; 12] = rng::default();
-    let mut id: [u8; 27] = [hex::DASH; 27];
+    let mut id: [u8; 31] = [hex::DASH; 31];
     for i in 0..4 {
         let r = hex::hex(buffer[i * 3]);
         let g = hex::hex(buffer[i * 3 + 1]);
         let b = hex::hex(buffer[i * 3 + 2]);
-        id[i * 7 + 0] = r[0];
-        id[i * 7 + 1] = r[1];
-        id[i * 7 + 2] = g[0];
-        id[i * 7 + 3] = g[1];
-        id[i * 7 + 4] = b[0];
-        id[i * 7 + 5] = b[1];
+        id[i * 8] = hex::NUMBER_SIGN;
+        id[i * 8 + 1] = r[0];
+        id[i * 8 + 2] = r[1];
+        id[i * 8 + 3] = g[0];
+        id[i * 8 + 4] = g[1];
+        id[i * 8 + 5] = b[0];
+        id[i * 8 + 6] = b[1];
     }
     unsafe {
         std::str::from_utf8_unchecked_mut(&mut id).to_owned()
@@ -25,17 +26,18 @@ pub fn colorid(count: usize) -> String {
     assert!(count > 0, "The count should at least greater than 0");
 
     let buffer: Vec<u8> = rng::generate(count * 3);
-    let mut id: Vec<u8> = vec![hex::DASH; count * 7 - 1];
+    let mut id: Vec<u8> = vec![hex::DASH; count * 8 - 1];
     for i in 0..count {
         let r = hex::hex(buffer[i * 3]);
         let g = hex::hex(buffer[i * 3 + 1]);
         let b = hex::hex(buffer[i * 3 + 2]);
-        id[i * 7 + 0] = r[0];
-        id[i * 7 + 1] = r[1];
-        id[i * 7 + 2] = g[0];
-        id[i * 7 + 3] = g[1];
-        id[i * 7 + 4] = b[0];
-        id[i * 7 + 5] = b[1];
+        id[i * 8] = hex::NUMBER_SIGN;
+        id[i * 8 + 1] = r[0];
+        id[i * 8 + 2] = r[1];
+        id[i * 8 + 3] = g[0];
+        id[i * 8 + 4] = g[1];
+        id[i * 8 + 5] = b[0];
+        id[i * 8 + 6] = b[1];
     }
     unsafe {
         std::str::from_utf8_unchecked_mut(&mut id).to_owned()
@@ -48,8 +50,8 @@ mod test_color {
 
     #[test]
     fn test_colorid() {
-        assert_eq!(colorid!().len(), 27);
-        assert_eq!(colorid(5).len(), 34);
+        assert_eq!(colorid!().len(), 31);
+        assert_eq!(colorid(5).len(), 39);
     }
 
     #[test]
