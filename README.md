@@ -13,7 +13,7 @@
 
 ```toml
 [dependencies]
-nanoid = "0.0.1"
+nanoid = "0.0.2"
 ```
 
 ## Usage
@@ -25,6 +25,16 @@ fn main() {
    let id = colorid!(); // #A3F68E-#33EFAF-#8CB823-#D82C91
 }
 ```
+
+`#A3F68E-#33EFAF-#8CB823-#D82C91`
+
+<div style="display: flex; flex-direction: row">
+   <div style="width: 20px; height: 20px; background-color: #A3F68E"></div>
+   <div style="width: 20px; height: 20px; background-color: #33EFAF"></div>
+   <div style="width: 20px; height: 20px; background-color: #8CB823"></div>
+   <div style="width: 20px; height: 20px; background-color: #D82C91"></div>
+</div>
+
 
 ## Benchmark
 
