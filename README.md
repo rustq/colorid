@@ -5,7 +5,7 @@
 [![Package version](https://img.shields.io/crates/v/colorid.svg)](https://crates.io/crates/colorid)
 [![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](https://github.com/rustq/colorid/blob/master/LICENSE)
 
-`Color as Identify - The ColorID in Rust`
+`Color as Identify - The unique color-ID string generator in Rust`
 
 `一款基于颜色表示身份的 Rust 随机 ID 生成器`
 
