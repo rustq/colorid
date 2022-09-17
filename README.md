@@ -5,15 +5,15 @@
 [![Package version](https://img.shields.io/crates/v/colorid.svg)](https://crates.io/crates/colorid)
 [![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](https://github.com/rustq/colorid/blob/master/LICENSE)
 
-`Color as Identify - The unique color-ID string generator in Rust`
+`Color as Identify - The unique 4-colors-ID string generator in in Rust`
 
-`一款基于颜色表示身份的 Rust 随机 ID 生成器`
+`一款基于 4 种颜色来表示身份的 Rust 随机 ID 生成器`
 
 ## Install
 
 ```toml
 [dependencies]
-nanoid = "0.0.2"
+nanoid = "0.0.4"
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ fn main() {
 }
 ```
 
-`#A3F68E-#33EFAF-#8CB823-#D82C91`
+`COLORID: #A3F68E-#33EFAF-#8CB823-#D82C91`
 
 <img src="https://user-images.githubusercontent.com/11075892/189936058-c85b9f86-6cd8-4904-a8ae-1f802d696113.svg" width="300px">
 

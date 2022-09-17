@@ -1,8 +1,8 @@
 [package]
 name = "colorid"
-version = "0.0.2"
+version = "0.0.4"
 license = "MIT"
-description = "WIP ColorID Generator for Rust"
+description = "The unique 4-colors-ID string generator in in Rust"
 edition = "2021"
 authors = ["RustQ"]
 include = ["src/**/*", "Cargo.toml", "LICENSE", "README.md", "benches"]
