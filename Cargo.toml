@@ -1,11 +1,11 @@
 [package]
 name = "colorid"
-version = "0.0.4"
+version = "0.0.6"
 license = "MIT"
 description = "The unique 4-colors-ID string generator in in Rust"
 edition = "2021"
 authors = ["RustQ"]
-include = ["src/**/*", "Cargo.toml", "LICENSE", "README.md", "benches"]
+include = ["src/**/*", "Cargo.toml", "LICENSE", "README.md", "benches", "examples"]
 homepage = "https://github.com/rustq/colorid"
 documentation = "https://docs.rs/colorid"
 readme = "README.md"
