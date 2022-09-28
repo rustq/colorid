@@ -13,7 +13,7 @@
 
 ```toml
 [dependencies]
-colorid = "0.0.4"
+colorid = "0.0.6"
 ```
 
 ## Usage
