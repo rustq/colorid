@@ -64,4 +64,4 @@ nanoid                  time:   [926.34 ns 926.45 ns 926.57 ns]
 
 ## ColorID in Other Languages
 
-- [JavaScript](https://github.com/rustq/colorid.js)
+- [WASM](https://github.com/rustq/colorid-wasm)
